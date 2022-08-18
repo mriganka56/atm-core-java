@@ -1,0 +1,172 @@
+SQL> select tname from tab
+  2  /
+
+TNAME                                                                           
+--------------------------------------------------------------------------------
+BONUS                                                                           
+DEPT                                                                            
+EMP                                                                             
+EMP2                                                                            
+SALGRADE                                                                        
+STUDENT                                                                         
+
+6 rows selected.
+
+SQL> create table customer(
+  2  name varchar2(20),
+  3  email varchar2(20),
+  4  atm_pin number(10),
+  5  pass varchar2(20),
+  6  phone number(10),
+  7  accno number(10),
+  8  accbal number(10)
+  9  )
+ 10  /
+
+Table created.
+
+SQL> desc customer
+ Name                                      Null?    Type
+ ----------------------------------------- -------- ----------------------------
+ NAME                                               VARCHAR2(20)
+ EMAIL                                              VARCHAR2(20)
+ ATM_PIN                                            NUMBER(10)
+ PASS                                               VARCHAR2(20)
+ PHONE                                              NUMBER(10)
+ ACCNO                                              NUMBER(10)
+ ACCBAL                                             NUMBER(10)
+
+SQL> select * from customer
+  2  /
+
+no rows selected
+
+SQL> /
+
+NAME                 EMAIL                   ATM_PIN PASS                       
+-------------------- -------------------- ---------- --------------------       
+     PHONE      ACCNO     ACCBAL                                                
+---------- ---------- ----------                                                
+A                    a                           123 abcd                       
+      1223      17767       1200                                                
+                                                                                
+
+SQL> column name format a10
+SQL> /
+
+NAME       EMAIL                   ATM_PIN PASS                      PHONE      
+---------- -------------------- ---------- -------------------- ----------      
+     ACCNO     ACCBAL                                                           
+---------- ----------                                                           
+A          a                           123 abcd                       1223      
+     17767       1200                                                           
+                                                                                
+
+SQL> column pass format a10
+SQL> /
+
+NAME       EMAIL                   ATM_PIN PASS            PHONE      ACCNO     
+---------- -------------------- ---------- ---------- ---------- ----------     
+    ACCBAL                                                                      
+----------                                                                      
+A          a                           123 abcd             1223      17767     
+      1200                                                                      
+                                                                                
+
+SQL> column email format a10
+SQL> /
+
+NAME       EMAIL         ATM_PIN PASS            PHONE      ACCNO     ACCBAL    
+---------- ---------- ---------- ---------- ---------- ---------- ----------    
+A          a                 123 abcd             1223      17767       1200    
+
+SQL> set pagesize 200
+SQL> set line 100
+SQL> /
+
+NAME       EMAIL         ATM_PIN PASS            PHONE      ACCNO     ACCBAL                        
+---------- ---------- ---------- ---------- ---------- ---------- ----------                        
+A          a                 123 abcd             1223      17767       1200                        
+
+SQL> truncate table customer
+  2  /
+
+Table truncated.
+
+SQL> select * from customer
+  2  /
+
+no rows selected
+
+SQL> desc customer
+ Name                                                  Null?    Type
+ ----------------------------------------------------- -------- ------------------------------------
+ NAME                                                           VARCHAR2(20)
+ EMAIL                                                          VARCHAR2(20)
+ ATM_PIN                                                        NUMBER(10)
+ PASS                                                           VARCHAR2(20)
+ PHONE                                                          NUMBER(10)
+ ACCNO                                                          NUMBER(10)
+ ACCBAL                                                         NUMBER(10)
+
+SQL> /
+
+no rows selected
+
+SQL> list
+  1* select * from customer
+SQL> /
+
+no rows selected
+
+SQL> /
+
+NAME       EMAIL         ATM_PIN PASS            PHONE      ACCNO     ACCBAL                        
+---------- ---------- ---------- ---------- ---------- ---------- ----------                        
+A          a                 123 abcd             1223      17767       1200                        
+
+SQL> truncate table customer
+  2  /
+
+Table truncated.
+
+SQL> select * from customer
+  2  /
+
+NAME       EMAIL         ATM_PIN PASS            PHONE      ACCNO     ACCBAL                        
+---------- ---------- ---------- ---------- ---------- ---------- ----------                        
+a          a@gmail          8888 a                   1        101       2000                        
+
+SQL> truncate table customer
+  2  /
+
+Table truncated.
+
+SQL> truncate table customer
+  2  /
+
+Table truncated.
+
+SQL> truncate table customer
+  2  /
+
+Table truncated.
+
+SQL> list
+  1* truncate table customer
+SQL> /
+
+Table truncated.
+
+SQL> /
+
+Table truncated.
+
+SQL> /
+
+Table truncated.
+
+SQL> disco
+Disconnected from Oracle Database 18c Express Edition Release 18.0.0.0.0 - Production
+Version 18.4.0.0.0
+SQL> exit
