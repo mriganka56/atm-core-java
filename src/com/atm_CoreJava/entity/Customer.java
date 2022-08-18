@@ -2,41 +2,91 @@ package com.atm_CoreJava.entity;
 
 public class Customer {
 
-	private String baname;
-	private String passwrd;
-	private int pino;
-	private String acno;
+	private String name;
+	private String email;
+	private Integer atmPin;
+	private String password;
+	private Long phoneNumber;
+	private Long accountNumber;
+	private Long accountBalance;
 
-	public String getBaname() {
-		return baname;
+	public Customer(String name, String email, Integer atmPin, String password, Long phoneNumber, Long accountNumber,
+			Long accountBalance) {
+		super();
+		this.name = name;
+		this.email = email;
+		this.atmPin = atmPin;
+		this.password = password;
+		this.phoneNumber = phoneNumber;
+		this.accountNumber = accountNumber;
+		this.accountBalance = accountBalance;
 	}
 
-	public void setBaname(String baname) {
-		this.baname = baname;
+	public Customer() {
+		// TODO Auto-generated constructor stub
 	}
 
-	public String getPasswrd() {
-		return passwrd;
+	public String getName() {
+		return name;
 	}
 
-	public void setPasswrd(String passwrd) {
-		this.passwrd = passwrd;
+	public void setName(String name) {
+		this.name = name;
 	}
 
-	public int getPino() {
-		return pino;
+	public String getEmail() {
+		return email;
 	}
 
-	public void setPino(int pino) {
-		this.pino = pino;
+	public void setEmail(String email) {
+		this.email = email;
 	}
 
-	public String getAcno() {
-		return acno;
+	public Integer getAtmPin() {
+		return atmPin;
 	}
 
-	public void setAcno(String acno) {
-		this.acno = acno;
+	public void setAtmPin(Integer atmPin) {
+		this.atmPin = atmPin;
+	}
+
+	public String getPassword() {
+		return password;
+	}
+
+	public void setPassword(String password) {
+		this.password = password;
+	}
+
+	public Long getPhoneNumber() {
+		return phoneNumber;
+	}
+
+	public void setPhoneNumber(Long phoneNumber) {
+		this.phoneNumber = phoneNumber;
+	}
+
+	public Long getAccountNumber() {
+		return accountNumber;
+	}
+
+	public void setAccountNumber(Long accountNumber) {
+		this.accountNumber = accountNumber;
+	}
+
+	public Long getAccountBalance() {
+		return accountBalance;
+	}
+
+	public void setAccountBalance(Long accountBalance) {
+		this.accountBalance = accountBalance;
+	}
+
+	@Override
+	public String toString() {
+		return "Customer [name=" + name + ", email=" + email + ", atmPin=" + atmPin + ", password=" + password
+				+ ", phoneNumber=" + phoneNumber + ", accountNumber=" + accountNumber + ", accountBalance="
+				+ accountBalance + "]";
 	}
 
 }

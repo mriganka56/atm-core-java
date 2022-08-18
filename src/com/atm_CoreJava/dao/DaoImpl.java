@@ -1,47 +1,39 @@
 package com.atm_CoreJava.dao;
 
-import com.atm_CoreJava.entity.Banker;
 import com.atm_CoreJava.entity.Customer;
 import com.atm_CoreJava.entity.Deposit;
-import com.atm_CoreJava.entity.Transfer;
-import com.atm_CoreJava.entity.Withdrawl;
+import com.atm_CoreJava.entity.Withdraw;
 
 public class DaoImpl implements Dao {
 
 	@Override
-	public boolean addBanker(Banker b) {
-		// TODO Auto-generated method stub
-		return false;
-	}
-
-	@Override
-	public Customer findCustomer(Customer c) {
+	public String deposit(Deposit deposit) {
 		// TODO Auto-generated method stub
 		return null;
 	}
 
 	@Override
-	public Deposit Addbal(Deposit da) {
+	public String withdraw(Withdraw withdraw) {
 		// TODO Auto-generated method stub
 		return null;
 	}
 
 	@Override
-	public int bal_enquiry(Customer cus) {
+	public Boolean register(Customer customer) {
 		// TODO Auto-generated method stub
-		return 0;
+		return null;
 	}
 
 	@Override
-	public int Witamt(Withdrawl w) {
+	public Customer fetchCustomer(Long accountNumber) {
 		// TODO Auto-generated method stub
-		return 0;
+		return null;
 	}
 
 	@Override
-	public int transfer(Transfer t) {
+	public Long balanceEnquiry(Long accountNumber, String password) {
 		// TODO Auto-generated method stub
-		return 0;
+		return null;
 	}
 
 }

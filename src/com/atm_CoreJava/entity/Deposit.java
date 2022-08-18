@@ -2,23 +2,44 @@ package com.atm_CoreJava.entity;
 
 public class Deposit {
 
-	private String dname;
-	private int bal;
+	private Long amount;
+	private Integer atmPin;
+	private Long accountNumber;
 
-	public String getDname() {
-		return dname;
+	public Deposit(Long amount, Integer atmPin, Long accountNumber) {
+		super();
+		this.amount = amount;
+		this.atmPin = atmPin;
+		this.accountNumber = accountNumber;
 	}
 
-	public void setDname(String dname) {
-		this.dname = dname;
+	public Long getAmount() {
+		return amount;
 	}
 
-	public int getBal() {
-		return bal;
+	public void setAmount(Long amount) {
+		this.amount = amount;
 	}
 
-	public void setBal(int bal) {
-		this.bal = bal;
+	public Integer getAtmPin() {
+		return atmPin;
+	}
+
+	public void setAtmPin(Integer atmPin) {
+		this.atmPin = atmPin;
+	}
+
+	public Long getAccountNumber() {
+		return accountNumber;
+	}
+
+	public void setAccountNumber(Long accountNumber) {
+		this.accountNumber = accountNumber;
+	}
+
+	@Override
+	public String toString() {
+		return "Deposit [amount=" + amount + ", atmPin=" + atmPin + ", accountNumber=" + accountNumber + "]";
 	}
 
 }

@@ -1,22 +1,19 @@
 package com.atm_CoreJava.dao;
 
-import com.atm_CoreJava.entity.Banker;
 import com.atm_CoreJava.entity.Customer;
 import com.atm_CoreJava.entity.Deposit;
-import com.atm_CoreJava.entity.Transfer;
-import com.atm_CoreJava.entity.Withdrawl;
+import com.atm_CoreJava.entity.Withdraw;
 
 public interface Dao {
 
-	boolean addBanker(Banker b);
+	public String deposit(Deposit deposit);
 
-	Customer findCustomer(Customer c);
+	public String withdraw(Withdraw withdraw);
 
-	Deposit Addbal(Deposit da);
+	public Boolean register(Customer customer);
 
-	int bal_enquiry(Customer cus);
+	public Customer fetchCustomer(Long accountNumber);
 
-	int Witamt(Withdrawl w);
+	public Long balanceEnquiry(Long accountNumber, String password);
 
-	int transfer(Transfer t);
 }
