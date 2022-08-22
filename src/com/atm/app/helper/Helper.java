@@ -6,6 +6,14 @@ import java.sql.SQLException;
 
 public class Helper {
 
+	private static String username;
+	private static String password;
+
+	public static void databaseConfiguration(String username, String password) {
+		Helper.username = username;
+		Helper.password = password;
+	}
+
 	static {
 		try {
 			Class.forName("oracle.jdbc.driver.OracleDriver");
@@ -15,8 +23,6 @@ public class Helper {
 	}
 
 	public static Connection getConnection() throws SQLException {
-		String password = "tiger";
-		String username = "C##SCOTT";
 		String driverURL = "jdbc:oracle:thin:@localhost:1521:XE";
 		return DriverManager.getConnection(driverURL, username, password);
 	}
